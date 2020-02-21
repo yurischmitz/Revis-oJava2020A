@@ -5,48 +5,42 @@
  */
 package com.mycompany.revisaojava;
 
+import dao.Conta;
+
 /**
  *
  * @author yuri.schmitz
  */
 public class EX3 {
     
-    /*public static void main(String[] args){
-
-         int[] array = {1,2,3,5};
-
-         int resultado = multiplicar(array);
-         
-         System.out.println("MULTIPLICAÇÃO: " + resultado);
-     }
-     
-     private static int multiplicar(int[] numeros){
-         int resultado = 1;
-
-         for(int i : numeros){
-             resultado *= i;
-         }
-         return resultado;
-     }*/
-     
-     //         ------- OU -------
-     
-     
-     public static void main(String[] args){
-
-         int[] numeros = {1,2,3,5};
-
-         multiplicar(numeros);
-         
-     }
-     
-     private static void multiplicar(int[] array){
-         float resultado = 1;
-
-         for(int i : array){
-             resultado *= i;
-         }
-         System.out.println("MULTIPLICAÇÃO: " + resultado);
-
-     }
+    public static void main(String[] args){
+        
+        System.out.println("ANTES");
+        Conta objConta1 = new Conta();    
+        //Preenche os atributos da classe
+        objConta1.agencia = 123;
+        objConta1.conta = 444;
+        objConta1.nome = "Juca Bala";
+        objConta1.saldo = 2000;
+        objConta1.imprimir();
+        
+        Conta objConta2 = new Conta();    
+        //Preenche os atributos da classe
+        objConta2.agencia = 900;
+        objConta2.conta = 658;
+        objConta2.nome = "Pedro Rocha";
+        objConta2.saldo = 5000;
+        objConta2.imprimir();
+        
+        double valorTransf = 2000;
+        objConta1.transferirValor(objConta2, valorTransf);
+        
+        //objConta1.imprimir();
+        System.out.println("DEPOIS");
+        objConta1.imprimir();
+        objConta2.imprimir();
+        
+    
+    }
+    
 }
